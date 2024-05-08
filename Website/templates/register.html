@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+{%block title%}
+Register Page | Notes &reg;
+{%endblock%}
+
+{%block header%}
+<header>
+    <a href="#" class="logo"><h2><span>N</span>OTES<span>.</span></h2></a>
+    <nav class="navigation">
+        <ul>
+            <div class="first">
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            <li><a href="{{url_for('register')}}">Register</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>
+{%endblock%}
+
+{%block contents%}
+
+
+<br><br>
+<section class="reg_form">
+    <h1>Register</h1>
+    <form method="post">
+        <input type="text" placeholder="Write your Username" name="username" required />
+        <br />
+        <input type="email" placeholder="Write Email" name="email" required />
+        <br />
+        <input type="password" placeholder="Password" name="password1" required />
+        <br>
+        <input type="password" placeholder=" Retype Password" name="password2" required />
+        <br>
+        <input type="checkbox" name="agreed" id="agree" required>I agree to the Terms and Conditions.
+        <br>
+        <input type="submit" value="Register" class="btn reg-btn">
+    </form>
+</section>
+
+{%endblock%}

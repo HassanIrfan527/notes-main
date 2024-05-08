@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{%block title%}
+Admin | Notes &reg;
+{%endblock%}
+
+{%block header%}
+<header>
+    <a href="#" class="logo"><h2><span>N</span>OTES<span>.</span></h2></a>
+</header>
+{%endblock%}
+
+{%block contents%}
+<h1>This is the Admin Page</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {}
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+{%endblock%}

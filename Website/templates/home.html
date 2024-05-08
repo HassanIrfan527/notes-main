@@ -1,0 +1,55 @@
+{%extends 'base.html'%}
+{%block title%}
+Home | Notes &reg;
+{%endblock%}
+
+{%block header%}
+<header>
+    <a href="{{url_for('home')}}" class="logo"><h2><span>N</span>OTES<span>.</span></h2></a>
+    <nav class="navigation">
+        <ul>
+            <div class="first">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('notes')}}">My Notes</a></li>
+            <li><a href="{{url_for('profile')}}">My Profile</a></li>
+        </div>
+        <div class="second">
+            <li><a href="{{url_for('logout')}}">Log Out</a></li>
+        </div>
+        </ul>
+    </nav>
+        <div class="menuToggle">
+            <div class="line-1 line"></div>
+            <div class="line-2 line"></div>
+            <div class="line-3 line"></div>
+        </div>
+    
+</header>
+{%endblock%}
+
+{%block contents%}
+<br><br>
+<section class="home">
+    <img src="{{url_for('static',filename='1.jpg')}}" alt="" class="bg-img">
+    <center>
+    <h1>Hello {{ user.username }}</h1></center>
+    <br><br>
+    <h2>Welcome to The NOTES !</h2>
+    <p>Here you can save your notes, and visit them later if you want. And don't worry, it's all free of cost.</p>
+    <h5> #Our mission is to ensure that you do not forget anything.</h5>
+</section>
+<br>
+<style>
+    header .logo{
+    color: white;
+}
+header nav ul .first li a{
+    color: white;
+}
+header nav ul .second li a:hover{
+    color: black;
+    background-color: #fff;
+    /* border: 1.5px solid aqua; */
+}
+</style>
+{%endblock%}

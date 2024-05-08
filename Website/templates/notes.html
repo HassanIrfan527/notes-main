@@ -1,0 +1,60 @@
+{%extends 'base.html'%}
+{%block title%} Your Notes | Notes &reg; {%endblock%}
+
+{%block header%}
+<link rel="stylesheet" href="{{url_for('static',filename='style_notes.css')}}">
+
+<header>
+  <a href="{{url_for('home')}}" class="logo">
+    <h2><span>N</span>OTES<span>.</span></h2>
+  </a>
+  <nav class="navigation">
+    <ul>
+      <div class="first">
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('notes')}}">My Notes</a></li>
+        <li><a href="{{url_for('profile')}}">My Profile</a></li>
+      </div>
+      <div class="second">
+        <li><a href="{{url_for('logout')}}">Log Out</a></li>
+      </div>
+    </ul>
+  </nav>
+  <div class="menuToggle">
+    <div class="line-1 line"></div>
+    <div class="line-2 line"></div>
+    <div class="line-3 line"></div>
+</div>
+</header>
+{%endblock%}
+
+{%block contents%}
+<br /><br />
+<section class="home">
+  <center>
+    <h1>Hello, {{ user.username }}</h1>
+    <p>
+      Following are the notes that you've saved. If there aren't any notes,
+      don't worry you can create new ones.
+    </p>
+    <form method="post">
+      <textarea name="note" id="note" cols="80" rows="3" class="note-text"></textarea>
+      <br>
+      <button class="btn add-note-btn">Add Note</button>
+    </form>
+  </center>
+  <ul class="notes-data">
+    {% for note in user.notes %}
+      <li class="list-group-item">
+        {{ note.data }}
+        <p class="date">Date : {{ note.date }}</p>
+    <button type="button" class="close-btn" onclick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    
+  </li>
+  {% endfor %}
+  </ul>
+  
+</section>
+{%endblock%}

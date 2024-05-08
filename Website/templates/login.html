@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+{%block title%}
+Login Page | Notes &reg;
+{%endblock%}
+
+{%block header%}
+<header>
+    <a href="#" class="logo"><h2><span>N</span>OTES<span>.</span></h2></a>
+    <nav class="navigation">
+        <ul>
+            <div class="first">
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            <li><a href="{{url_for('register')}}">Register</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>
+{%endblock%}
+
+{%block contents%}
+
+<br><br>
+<section class="reg_form">
+    <h1>Login</h1>
+    <form method="post">
+        Email
+        <br>
+        <input type="email" placeholder="Write Email" name="email" required/>
+        <br />
+        Password
+        <br>
+        <input type="password" placeholder="Password" name="password" required/>
+        <br>
+        <input type="checkbox" name="agreed" id="agree">Remember Me.
+        <br>
+        <input type="submit" value="Login" class="btn login-btn">
+        
+        
+    </form>
+</section>
+<style>
+    @media only screen and (max-width: 605px) {
+    header .navigation {
+        margin-right: 150px;
+    }
+
+}
+
+</style>
+
+{%endblock%}

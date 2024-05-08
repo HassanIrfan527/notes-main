@@ -1,0 +1,21 @@
+/* @media only screen and (max-width: 705px) {
+    .home h5{
+        margin-left: 50px;
+    }
+}
+@media only screen and (max-width: 605px) {
+
+    header .navigation{
+        position: absolute;
+        top: 150px;
+        right: 0;
+        width: 100px;
+        height: 50%;
+        display: flex;
+        
+    }
+    .menuToggle{
+        display: flex;
+    }
+
+} */

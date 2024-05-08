@@ -1,0 +1,11 @@
+{
+    "parameters":{
+        "local-uri" : "sqlite:///Users.db",
+        
+        "admin" : {
+            "username" : "Anonymous",
+            "password" : "anonymous!@525"
+        }
+    }
+
+}

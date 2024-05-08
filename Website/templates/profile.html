@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+{%block title%}
+Profile | Notes &reg;
+{%endblock%}
+
+{%block header%}
+<header>
+    <a href="{{url_for('home')}}" class="logo"><h2><span>N</span>OTES<span>.</span></h2></a>
+    <nav class="navigation">
+        <ul>
+            <div class="first">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('notes')}}">My Notes</a></li>
+            <li><a href="{{url_for('profile')}}">My Profile</a></li>
+        </div>
+        <div class="second">
+            <li><a href="{{url_for('logout')}}">Log Out</a></li>
+        </div>
+        </ul>
+    </nav>
+    <div class="menuToggle">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+    </div>
+</header>
+{%endblock%}
+
+{%block contents%}
+<br><br>
+<section class="home">
+    <center>
+    <h1>Your Profile</h1>
+    
+    <div class="account-info">
+        <div class="row first-row">
+            <div class="title title-username">Username</div>
+            <div class="content content-username"><input type="text" readonly value="{{ user.username }}"></div>
+        </div>
+        <div class="row second-row">
+            <div class="title title-email">Email</div>
+            <div class="content content-email"><input type="text" readonly value="{{ user.email }}"></div>
+        </div>
+        <div class="row third-row">
+            <div class="title title-password">Notes Saved</div>
+            <div class="content content-password"><input type="text" readonly value="{{ no_of_notes }}"></div>
+        </div>
+    </div>
+    
+</center>
+</section>
+{%endblock%}
+

@@ -1,0 +1,84 @@
+
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+}
+
+.reg_form {
+    margin-left: 50px;
+}
+.reg_form h1{
+    text-align: center;
+    font-size: 40px;
+}
+.reg_form form {
+    margin-top: 25px;
+}
+.reg_form form input {
+    margin: 5px;
+    height: 40px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#agree {
+    height: 15px;
+    width: 26px;
+}
+
+.btn {
+    height: 35px;
+    width: 100px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 1.2px solid black;
+    border-radius: 5px;
+    transition: 0.6s;
+}
+.btn.login-btn {
+    font-size: 15px;
+}
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(5px);
+}
+
+.msg {
+
+    background-color: rgb(241, 80, 80);
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content:space-between;
+    color: rgb(0, 0, 0);
+    height: 25px;
+    display: flex;
+}
+.msg div {
+    margin-left: 30px;
+}
+.inactive{
+    display: none;
+}
+
+.success-msg {
+    background-color: rgb(86, 196, 230);
+    font-size: 19px;
+    align-items:center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+.close{
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin-right: 30px;
+}
+.close:hover{
+    cursor: pointer;
+    background-color: rgba(216, 202, 202, 0.192);
+}
